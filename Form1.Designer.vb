@@ -26,13 +26,16 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnRegistrar = New System.Windows.Forms.Button()
         Me.grdAlumnos = New System.Windows.Forms.DataGridView()
+        Me.txtID = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnEditar = New System.Windows.Forms.Button()
         CType(Me.grdAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtNombre
         '
         Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.Location = New System.Drawing.Point(63, 76)
+        Me.txtNombre.Location = New System.Drawing.Point(131, 76)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(334, 31)
         Me.txtNombre.TabIndex = 0
@@ -41,19 +44,19 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(58, 38)
+        Me.Label1.Location = New System.Drawing.Point(126, 48)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(196, 25)
+        Me.Label1.Size = New System.Drawing.Size(93, 25)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Ingrese su nombre:"
+        Me.Label1.Text = "Nombre:"
         '
         'btnRegistrar
         '
-        Me.btnRegistrar.Location = New System.Drawing.Point(415, 69)
+        Me.btnRegistrar.Location = New System.Drawing.Point(471, 69)
         Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(160, 50)
+        Me.btnRegistrar.Size = New System.Drawing.Size(75, 50)
         Me.btnRegistrar.TabIndex = 2
-        Me.btnRegistrar.Text = "REGISTRAR ALUMNO..."
+        Me.btnRegistrar.Text = "Insertar"
         Me.btnRegistrar.UseVisualStyleBackColor = True
         '
         'grdAlumnos
@@ -61,14 +64,45 @@ Partial Class Form1
         Me.grdAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdAlumnos.Location = New System.Drawing.Point(63, 136)
         Me.grdAlumnos.Name = "grdAlumnos"
-        Me.grdAlumnos.Size = New System.Drawing.Size(512, 332)
+        Me.grdAlumnos.Size = New System.Drawing.Size(597, 332)
         Me.grdAlumnos.TabIndex = 3
+        '
+        'txtID
+        '
+        Me.txtID.Enabled = False
+        Me.txtID.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtID.Location = New System.Drawing.Point(63, 76)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(62, 29)
+        Me.txtID.TabIndex = 4
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(58, 48)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(32, 25)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "ID"
+        '
+        'btnEditar
+        '
+        Me.btnEditar.Location = New System.Drawing.Point(552, 69)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(75, 50)
+        Me.btnEditar.TabIndex = 6
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(672, 480)
+        Me.Controls.Add(Me.btnEditar)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.grdAlumnos)
         Me.Controls.Add(Me.btnRegistrar)
         Me.Controls.Add(Me.Label1)
@@ -85,4 +119,7 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents btnRegistrar As Button
     Friend WithEvents grdAlumnos As DataGridView
+    Friend WithEvents txtID As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents btnEditar As Button
 End Class
